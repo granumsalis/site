@@ -4,50 +4,48 @@
  * Paralax
  * ---------------------------------------------- */
 .parallax-container {
-    height: 510px;
+  height: 510px;
 }
 
 /* -----------------------------------------------
  * Timeline
  * --------------------------------------------- */
 .thinkslow-toolbar {
-    padding: 24px;
-    margin-bottom: 24px;
-    align-content: center;
+  padding: 24px;
+  margin-bottom: 24px;
+  align-content: center;
 }
 
 .thinkslow-toolbar .btn {
-    margin: 4px;
+  margin: 4px;
 }
 
 .thinkslow-past-event-card {
-    max-height: 330px;
+  max-height: 330px;
 }
 
 .thinkslow-past-event-card__description {
-    overflow-y: auto;
-    max-height: 240px;
+  overflow-y: auto;
+  max-height: 240px;
 }
 
 .thinkslow-header-slider .indicator-item.active {
-    background-color: #78909c !important;
+  background-color: #78909c !important;
 }
 
 .thinkslow-header-slider {
-    position: absolute;
-    top: 30px;
-    height: 550px;
+  position: absolute;
+  top: 30px;
+  height: 550px;
 }
 
 .thinkslow-header-slides {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .thinkslow-feedback-icons {
-    text-shadow: -1px 0 #78909c, 0 1px #78909c, 1px 0 #78909c, 0 -1px #78909c;
-    color: white;
-    font-size: 80px;
-    cursor: pointer;
+  text-shadow: -1px 0 #78909c, 0 1px #78909c, 1px 0 #78909c, 0 -1px #78909c;
+  color: white;
+  font-size: 80px;
+  cursor: pointer;
 }
-
-

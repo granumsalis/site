@@ -12,6 +12,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css!sass'
+      },
+      {
+        test: /\.html$/,
+        loader: 'ng-cache'
       }
     ]
   }
