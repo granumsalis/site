@@ -24,9 +24,9 @@
             <span class="blue-grey-text text-darken-3">Щепотка соли</span>
         </a>
         <ul class="blue-grey darken-3 left hide-on-med-and-down">
-            <li><a href="sass.html">Анонсы</a></li>
-            <li><a href="badges.html">Лекторы</a></li>
-            <li><a href="collapsible.html">Материалы</a></li>
+            <li><a href="#next-events" class="ts-scrollspy-link">Анонсы</a></li>
+            <!--<li><a href="#speakers">Лекторы</a></li>-->
+            <li><a href="#past-events" class="ts-scrollspy-link">Прошедшие события</a></li>
         </ul>
     </div>
 </nav>
@@ -70,27 +70,6 @@
 
 </div>
 
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-
-<script id="speaker-template" type="text/x-handlebars-template">
-    {{#events}}
-    <div class="row">
-        {{#if isEven}}
-        <div class="col s0 m3">&nbsp;</div>
-        {{/if}}
-        <div class="col s12 m9">
-            <div class="card blue-grey lighten-5 hoverable">
-                <div class="card-content thinkslow-past-event-card">
-                    <span class="card-title black-text">{{title}}</span>
-                    <div class="thinkslow-past-event-card__description">{{description}}</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{/events}}
-</script>
 <script>
     var d = {
         "speakers": [
@@ -122,64 +101,39 @@
             "description": "Сооснователь Data Mining Labs, директор данных Diginetica, глава группы анализа данных института аналитики Deloitte",
             "photo": "http://cs628529.vk.me/v628529225/eabf/r3EkRVV4lyU.jpg",
             "link": "google.com"
-        }],
-        "events": [
-            {
-                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
-                "speakers": [0, 1, 2, 3],
-                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
-                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
-            },
-            {
-                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
-                "speakers": [0, 1, 2, 3],
-                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
-                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
-            },
-            {
-                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
-                "speakers": [0, 1, 2, 3],
-                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
-                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
-            },
-            {
-                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
-                "speakers": [0, 1, 2, 3],
-                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
-                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
-            },
-            {
-                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
-                "speakers": [0, 1, 2, 3],
-                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
-                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
-            }
-        ]
+        }]
     };
 
     $(function () {
-        var source = $('#speaker-template').html();
-        var template = Handlebars.compile(source);
-        var $placeholder = $('#speakers-placeholder');
-
-        d.events.forEach(function (evt, idx) {
-            if (idx % 2) {
-                evt.isEven = true;
-            }
-        });
-
-        $placeholder.append(template(d));
         $('.modal-trigger').leanModal();
 
         $('.slider').slider({full_width: true});
 
         $('.parallax').parallax();
 
-        $('.thinkslow-events-list:first-child').addClass('active')
+        $('.thinkslow-events-list:first-child').addClass('active');
+
+        $('.scrollspy').scrollSpy();
+
+        $('.ts-scrollspy-link').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
     });
 </script>
 
-<div class="container">
+<div class="container" ng-controller="ThinkSlowMainCtrl as thinkSlowMainCtrl">
+
+    <h4 id="next-events">Ближайшие события</h4>
+
     <div class="row">
         <div class="col s12">
             <ul class="collapsible thinkslow-events-list" data-collapsible="expandable">
@@ -199,8 +153,10 @@
         </div>
     </div>
 
+    <h4 id="past-events">Материалы прошедших событий</h4>
 
-    <div id="speakers-placeholder" class="row" style="width: 100% !important">
+    <div ng-repeat="meeting in thinkSlowMainCtrl.pastMettings">
+        <ts-past-meeting-card meeting="meeting" is-even="$index % 2"></ts-past-meeting-card>
     </div>
 
     <div class="row">

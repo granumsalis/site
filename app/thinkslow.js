@@ -13,4 +13,7 @@ thinkSlowAppModule.config([
     }
 ]);
 
+require('./ts-past-meeting-card');
+require('./think-slow-main-ctrl');
 
+module.exports = thinkSlowAppModule;
