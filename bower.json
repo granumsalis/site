@@ -1,0 +1,13 @@
+{
+  "name": "thinkslow",
+  "main": "thinkslow.js",
+  "version": "0.0.0",
+  "authors": [
+    "Ekaterina Zaikina <katriyna@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-materialize": "0.1",
+    "stamplay-sdk": "~1.2.6"
+  }
+}

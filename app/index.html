@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Щепотка соли</title>
+    <!-- CSS-->
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <script src="http://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/1.2.6/stamplay.min.js"></script>
+    <script src="thinkslow.min.js"></script>
+
+</head>
+<body ng-app="thinkSlowApp">
+<nav>
+    <div class="nav-wrapper blue-grey lighten-5">
+        <a href="http://vk.com/thinkslow" target="_blank" class="brand-logo right">
+            <span class="blue-grey-text text-darken-3">Щепотка соли</span>
+        </a>
+        <ul class="blue-grey darken-3 left hide-on-med-and-down">
+            <li><a href="sass.html">Анонсы</a></li>
+            <li><a href="badges.html">Лекторы</a></li>
+            <li><a href="collapsible.html">Материалы</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="http://cs625119.vk.me/v625119806/2eecc/-IQfIOp2VAU.jpg">
+    </div>
+    <div class="slider thinkslow-header-slider">
+        <ul class="slides thinkslow-header-slides">
+            <li>
+                <div class="caption center-align">
+                    <h3>Лекции</h3>
+                </div>
+            </li>
+            <li>
+                <div class="caption left-align">
+                    <h3>Интерактивные занятия</h3>
+                </div>
+            </li>
+            <li>
+                <div class="caption right-align">
+                    <h3>Нетворкинг</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="blue-grey lighten-5 thinkslow-toolbar">
+    <div class="container">
+        <div class="section">
+            Щепотка соли &mdash; живой тёплый ламповый дискуссионный клуб.
+            Наука, индустрии и социальные взаимодействия развиваются экспоненциально, поэтому информация о них не вмещается целиком в головы отдельных людей.
+            Каждое воскресенье участники сталкиваются друг с другом и с компетентными экспертами, охватывая интересные для современных интеллектуалов вопросы и сжимая информацию до размера небольших инсайтов.
+        </div>
+        <div>
+            <a class="waves-effect waves-light btn blue-grey darken-3">Предложить тему встречи</a>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+
+<script id="speaker-template" type="text/x-handlebars-template">
+    {{#events}}
+    <div class="row">
+        {{#if isEven}}
+        <div class="col s0 m3">&nbsp;</div>
+        {{/if}}
+        <div class="col s12 m9">
+            <div class="card blue-grey lighten-5 hoverable">
+                <div class="card-content thinkslow-past-event-card">
+                    <span class="card-title black-text">{{title}}</span>
+                    <div class="thinkslow-past-event-card__description">{{description}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/events}}
+</script>
+<script>
+    var d = {
+        "speakers": [
+        {
+            "id": 0,
+            "name": "Валентина Крупадерова",
+            "organisation": null,
+            "description": "Закончила матмех СПбГУ, работает в IT c 2007 года, последние 4 года — в менеджменте. В 2015 году была спикером на конференцияx AgileDays и AnalystDays. Области профессиональных интересов — управление рисками, управление требованиями, кастомизация, построение процессов.",
+            "photo": "http://cs628529.vk.me/v628529225/ea8f/PtPDiHe_Kn8.jpg",
+            "link": "google.com"
+        }, {
+            "id": 1,
+            "name": "Дмитрий Покропский",
+            "organisation": "НИУ Высшая школа экономики",
+            "description": "Научный сотрудник лаборатории теории рынков и пространственной экономики научно-исследовательского университета Высшая школа экономики, экономист-математик",
+            "photo": "http://cs628529.vk.me/v628529225/ea9d/UpKzMZ4uNwI.jpg",
+            "link": "google.com"
+        }, {
+            "id": 2,
+            "name": "Михаил Аллахвердов",
+            "organisation": "СПбГУ",
+            "description": "Ассистент кафедры проблем конвергенции естественных и гуманитарных наук СПбГУ, медиатор, специалист по управлению конфликтами.",
+            "photo": "http://cs628529.vk.me/v628529225/eaac/U3-t4O1gJLA.jpg",
+            "link": "google.com"
+        }, {
+            "id": 3,
+            "name": "Алексей Натекин",
+            "organisation": "Data Mining Labs, Diginetica",
+            "description": "Сооснователь Data Mining Labs, директор данных Diginetica, глава группы анализа данных института аналитики Deloitte",
+            "photo": "http://cs628529.vk.me/v628529225/eabf/r3EkRVV4lyU.jpg",
+            "link": "google.com"
+        }],
+        "events": [
+            {
+                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
+                "speakers": [0, 1, 2, 3],
+                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
+                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
+            },
+            {
+                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
+                "speakers": [0, 1, 2, 3],
+                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
+                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
+            },
+            {
+                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
+                "speakers": [0, 1, 2, 3],
+                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
+                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
+            },
+            {
+                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
+                "speakers": [0, 1, 2, 3],
+                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
+                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
+            },
+            {
+                "title": "Думай хотя бы иногда, решай хотя бы что-нибудь",
+                "speakers": [0, 1, 2, 3],
+                "timepadLink": "https://thinksharp.timepad.ru/event/228376/",
+                "description": "<p><strong>Вы узнаете:</strong></p> <ul><li><span>Как изменился подход к управлению в IT&nbsp;за последние 30 лет?</span></li><li><span>Почему IT-менеджмент интересуется теорией принятия решений</span></li><li><span>Почему важна эта встреча</span>?</li> </ul><ul> <li>Как экономисты моделируют поведение агентов в условиях неопределенности,&nbsp;неполной и асимметричной информации</li> <li>Почему экономика не может объяснить парадоксы человеческого поведения</li> </ul> <ul> <li>Знаем ли мы что такое принятие решений?</li> <li>Что влияет на то, какое решение примет человек? (когнитивные и социальные аспекты принятия решений)</li> <li>Можем ли мы понять принятие решений без понимания того, как работает сознание?</li> <li>Как человек принимает решения в конфликте и что мы делаем, что бы помочь ему принять решение?</li> </ul><ul> <li>Прескриптивная аналитика, или почему анализ данных в его текущем виде практически никому не нужен.</li> </ul>"
+            }
+        ]
+    };
+
+    $(function () {
+        var source = $('#speaker-template').html();
+        var template = Handlebars.compile(source);
+        var $placeholder = $('#speakers-placeholder');
+
+        d.events.forEach(function (evt, idx) {
+            if (idx % 2) {
+                evt.isEven = true;
+            }
+        });
+
+        $placeholder.append(template(d));
+        $('.modal-trigger').leanModal();
+
+        $('.slider').slider({full_width: true});
+
+        $('.parallax').parallax();
+
+        $('.thinkslow-events-list:first-child').addClass('active')
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <ul class="collapsible thinkslow-events-list" data-collapsible="expandable">
+                <li>
+                    <div class="collapsible-header">First</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Second</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Third</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="speakers-placeholder" class="row" style="width: 100% !important">
+    </div>
+
+    <div class="row">
+        <div class="col s6 center-align">
+            <i class="material-icons thinkslow-feedback-icons">email</i><br/>
+            <span>Связаться с нами</span>
+        </div>
+        <div class="col s6 center-align">
+            <i class="material-icons thinkslow-feedback-icons">assignment</i><br/>
+            <span>Форма обратной связи</span>
+        </div>
+    </div>
+</div>
+<p>&nbsp;</p>
+
+
+
+
+<footer class="page-footer blue-grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col offset-m2 m4 offset-s0 s12">
+                <h5 class="white-text">Контакты</h5>
+                <p class="enumerating-panel white-text">
+                    Здесь контакты
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Партнёры</h5>
+                <p class="enumerating-panel">
+                    <a class="grey-text text-lighten-3 enumerating-panel__item" target="_blank">Первый</a>
+                    <a class="grey-text text-lighten-3 enumerating-panel__item" target="_blank">Второй</a>
+                    <a class="grey-text text-lighten-3 enumerating-panel__item" target="_blank">Третий</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="row">
+                <div class="col s6 center-align">
+                    © 2015 Щепотка соли
+                </div>
+                <div class="col s6 center-align">
+                    <a class="grey-text text-lighten-4" href="http://vk.com/thinkslow">vk.com/thinkslow</a>
+                </div>
+            </div>
+        </div>
+</footer>
+
+
+<div id="lecture-details-dialog" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+    </div>
+</div>
+
+</body>
+</html>
