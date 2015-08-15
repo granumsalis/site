@@ -49,3 +49,17 @@
   font-size: 80px;
   cursor: pointer;
 }
+
+.thinkslow-announcement {
+  &__title {
+    padding: 16px 8px;
+    width: 100%;
+    font-size: 21px;
+    margin-bottom: 5px;
+  }
+  &__body {
+    height: 420px;
+    padding: 16px 8px;
+    margin-top: 3px;
+  }
+}
