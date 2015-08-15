@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col s12 m6">
+        <ul class="tabs">
+            <li class="tab col s4"><a class="active" ng-href="#announcement-{{ctrl.id}}-description">Описание</a></li>
+            <li class="tab col s4"><a ng-href="#announcement-{{ctrl.id}}-place">Место</a></li>
+            <li class="tab col s4"><a ng-href="#announcement-{{ctrl.id}}-registration">Регистрация</a></li>
+        </ul>
+    </div>
+    <div id="{{ 'announcement-' + ctrl.id + '-description' }}" class="col s12">Test 1</div>
+    <div id="{{ 'announcement-' + ctrl.id + '-place' }}" class="col s12">Test 2</div>
+    <div id="{{ 'announcement-' + ctrl.id + '-registration' }}" class="col s12">Test 3</div>
+</div>
+

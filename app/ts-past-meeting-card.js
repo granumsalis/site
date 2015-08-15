@@ -20,7 +20,6 @@ angular.module('thinkSlowApp')
                   var ctrl = this;
 
                   $scope.$watch('ctrl.meeting', function(meeting) {
-                    debugger;
                     if (meeting && meeting.description) {
                       ctrl.trustedDescription = $sce.trustAsHtml(meeting.description);
                     } else {

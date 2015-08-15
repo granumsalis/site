@@ -104,30 +104,6 @@
         }]
     };
 
-    $(function () {
-        $('.modal-trigger').leanModal();
-
-        $('.slider').slider({full_width: true});
-
-        $('.parallax').parallax();
-
-        $('.thinkslow-events-list:first-child').addClass('active');
-
-        $('.scrollspy').scrollSpy();
-
-        $('.ts-scrollspy-link').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
 </script>
 
 <div class="container" ng-controller="ThinkSlowMainCtrl as thinkSlowMainCtrl">
@@ -135,8 +111,8 @@
     <h4 id="next-events">Ближайшие события</h4>
 
     <div class="row">
-        <div class="col s12">
-            <ul class="collapsible thinkslow-events-list" data-collapsible="expandable">
+        <div class="col s12" ng-repeat="announcement in thinkSlowMainCtrl.mettingsAnnouncements">
+            <!--<ul class="collapsible thinkslow-events-list" data-collapsible="expandable">
                 <li>
                     <div class="collapsible-header">First</div>
                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
@@ -149,14 +125,15 @@
                     <div class="collapsible-header">Third</div>
                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                 </li>
-            </ul>
+            </ul>-->
+            <ts-meeting-announcement meeting="announcement" is-last="$last"></ts-meeting-announcement>
         </div>
     </div>
 
     <h4 id="past-events">Материалы прошедших событий</h4>
 
     <div ng-repeat="meeting in thinkSlowMainCtrl.pastMettings">
-        <ts-past-meeting-card meeting="meeting" is-even="$index % 2"></ts-past-meeting-card>
+        <ts-past-meeting-card meeting="meeting" is-even="$even"></ts-past-meeting-card>
     </div>
 
     <div class="row">

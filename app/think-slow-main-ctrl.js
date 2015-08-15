@@ -40,5 +40,6 @@ angular.module('thinkSlowApp')
           ];
 
           thinkSlowMainCtrl.pastMettings = mockMeetings;
+          thinkSlowMainCtrl.mettingsAnnouncements = mockMeetings;
         }
     ]);
