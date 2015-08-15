@@ -1,4 +1,4 @@
-<div class="row z-depth-1">
+<div class="row thinkslow-announcement">
     <div class="col s12">
         <div class="thinkslow-announcement__title">{{ctrl.meeting.title}}</div>
     </div>
@@ -11,9 +11,7 @@
         </ul>
     </div>
     <div id="{{ 'announcement-' + ctrl.id + '-description' }}" class="col s12">
-        <div class="thinkslow-announcement__body">
-            Test 1
-        </div>
+        <div class="thinkslow-announcement__body" ng-bind-html="ctrl.trustedDescription"></div>
     </div>
     <div id="{{ 'announcement-' + ctrl.id + '-place' }}" class="col s12">
         <div class="thinkslow-announcement__body">
@@ -22,7 +20,13 @@
     </div>
     <div id="{{ 'announcement-' + ctrl.id + '-registration' }}" class="col s12">
         <div class="thinkslow-announcement__body">
-            Test 3
+            <div ng-if="ctrl.meeting.timepadCustomizedId && ctrl.meeting.timepadEventId">
+                <script type="text/javascript" defer="defer" charset="UTF-8"
+                        data-timepad-customized="{{ctrl.meeting.timepadCustomizedId}}"
+                        data-twf2s-event--id="{{ctrl.meeting.timepadEventId}}"
+                        data-timepad-widget-v2="event_register"
+                        src="https://timepad.ru/js/tpwf/loader/min/loader.js"></script>
+            </div>
         </div>
     </div>
 </div>

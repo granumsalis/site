@@ -1,8 +1,8 @@
 <div class="row">
     <div ng-if="!ctrl.isEven()" class="col s0 m2">&nbsp;</div>
     <div class="col s12 m10">
-        <div class="card blue-grey lighten-5 hoverable">
-            <div class="card-content thinkslow-past-event-card">
+        <div class="thinkslow-past-event-card">
+            <div class="card-content">
                 <span class="card-title black-text">{{ctrl.meeting.title}}</span>
                 <div class="thinkslow-past-event-card__description" ng-bind-html="ctrl.trustedDescription"></div>
             </div>
