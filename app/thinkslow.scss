@@ -1,4 +1,28 @@
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
+$roboto-font-path: "../bower_components/materialize/font/roboto/" !default;
+$icons-font-path: "../bower_components/materialize/font/material-design-icons/" !default;
+
+@import "../bower_components/materialize/sass/components/color";
+$primary-color: color("blue-grey", "darken-2");
+
+@import "../bower_components/materialize/sass/materialize";
+
+
+/*
+$primary-color-light: false !default;
+$primary-color-dark: false !default;
+@if not $primary-color-light {
+  $primary-color-light: lighten($primary-color, 15%);
+}
+@if not $primary-color-dark {
+  $primary-color-dark: darken($primary-color, 15%);
+}
+$secondary-color: color("teal", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("materialize-red", "base") !default;
+
+$link-color: color("light-blue", "darken-1") !default;
+*/
+
 
 /* -----------------------------------------------
  * Paralax
@@ -54,12 +78,14 @@
   &__title {
     padding: 16px 8px;
     width: 100%;
-    font-size: 21px;
+    font-size: 27px;
     margin-bottom: 5px;
+    border-bottom: 1px solid lighten($primary-color, 50%);
+    color: darken($primary-color, 2);
   }
   &__body {
     height: 420px;
     padding: 16px 8px;
-    margin-top: 3px;
+    border-top: 1px solid lighten($primary-color, 50%);
   }
 }
