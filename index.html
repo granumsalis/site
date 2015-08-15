@@ -64,7 +64,7 @@
             Каждое воскресенье участники сталкиваются друг с другом и с компетентными экспертами, охватывая интересные для современных интеллектуалов вопросы и сжимая информацию до размера небольших инсайтов.
         </div>
         <div>
-            <a class="waves-effect waves-light btn blue-grey darken-3">Предложить тему для встречи</a>
+            <a class="waves-effect waves-light btn blue-grey darken-3">Предложить тему встречи</a>
         </div>
     </div>
 
@@ -81,8 +81,8 @@
         <div class="col s0 m3">&nbsp;</div>
         {{/if}}
         <div class="col s12 m9">
-            <div class="card blue-grey lighten-5 hoverable thinkslow-past-event-card">
-                <div class="card-content">
+            <div class="card blue-grey lighten-5 hoverable">
+                <div class="card-content thinkslow-past-event-card">
                     <span class="card-title black-text">{{title}}</span>
                     <div class="thinkslow-past-event-card__description">{{description}}</div>
                 </div>
@@ -173,22 +173,44 @@
 
         $('.slider').slider({full_width: true});
 
-        $(function(){
-            $('.parallax').parallax();
-        });
+        $('.parallax').parallax();
+
+        $('.thinkslow-events-list:first-child').addClass('active')
     });
 </script>
 
 <div class="container">
+    <div class="row">
+        <div class="col s12">
+            <ul class="collapsible thinkslow-events-list" data-collapsible="expandable">
+                <li>
+                    <div class="collapsible-header">First</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Second</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Third</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
     <div id="speakers-placeholder" class="row" style="width: 100% !important">
     </div>
 
     <div class="row">
-        <div class="col s6">
-            <i class="material-icons">email</i>
+        <div class="col s6 center-align">
+            <i class="material-icons thinkslow-feedback-icons">email</i><br/>
+            <span>Связаться с нами</span>
         </div>
-        <div class="col s6">
-            <i class="material-icons">assignment</i>
+        <div class="col s6 center-align">
+            <i class="material-icons thinkslow-feedback-icons">assignment</i><br/>
+            <span>Форма обратной связи</span>
         </div>
     </div>
 </div>
@@ -217,9 +239,13 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <div class="container">
-                © 2015 Щепотка соли
-                <a class="grey-text text-lighten-4 right" href="http://vk.com/thinkslow">vk.com/thinkslow</a>
+            <div class="row">
+                <div class="col s6 center-align">
+                    © 2015 Щепотка соли
+                </div>
+                <div class="col s6 center-align">
+                    <a class="grey-text text-lighten-4" href="http://vk.com/thinkslow">vk.com/thinkslow</a>
+                </div>
             </div>
         </div>
 </footer>

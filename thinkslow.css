@@ -42,3 +42,12 @@
 .thinkslow-header-slides {
     background-color: transparent !important;
 }
+
+.thinkslow-feedback-icons {
+    text-shadow: -1px 0 #78909c, 0 1px #78909c, 1px 0 #78909c, 0 -1px #78909c;
+    color: white;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+
