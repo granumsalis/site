@@ -32,10 +32,10 @@ $link-color: color("light-blue", "darken-1") !default;
 }
 
 .thinkslow-header {
-  margin: 120px 0 0 0;
+  margin: 90px 0 0 0;
+  text-align: center;
   font-weight: 400;
   font-size: 3.28rem;
-  border-bottom: 1px solid lighten($primary-color, 50%);
 }
 
 /* -----------------------------------------------
@@ -87,11 +87,10 @@ $link-color: color("light-blue", "darken-1") !default;
 }
 
 .thinkslow-announcement {
-  margin-top: 70px;
+  margin-top: 40px;
   &:first-child {
     margin-top: 40px;
   }
-  @extend .z-depth-1;
 
   &__title {
     padding: 16px 8px;
@@ -99,12 +98,10 @@ $link-color: color("light-blue", "darken-1") !default;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
-    border-bottom: 1px solid lighten($primary-color, 50%);
     color: $primary-color;
   }
   &__body {
     height: 420px;
     padding: 16px 8px;
-    border-top: 1px solid lighten($primary-color, 50%);
   }
 }
