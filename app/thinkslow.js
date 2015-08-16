@@ -17,5 +17,6 @@ require('./effects-initialization');
 require('./ts-meeting-announcement');
 require('./ts-past-meeting-card');
 require('./think-slow-main-ctrl');
+require('./suggest-topic-action.html');
 
 module.exports = thinkSlowAppModule;
