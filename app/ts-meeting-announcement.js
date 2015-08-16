@@ -28,6 +28,9 @@ angular.module('thinkSlowApp')
                   ctrl.trustedDescription = null;
                 }
               });
+
+              var yaMapUrl = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0w6kgw7s0yyARYujkwnvhpo3yCEaTFNZ&width=600&height=380&id=map-placeholder-' + ctrl.id;
+              $.getScript(yaMapUrl, angular.noop);
             }
           ]
         };
