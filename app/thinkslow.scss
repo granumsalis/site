@@ -101,7 +101,9 @@ $link-color: color("light-blue", "darken-1") !default;
     color: $primary-color;
   }
   &__body {
-    height: 420px;
+    height: 620px;
+    max-height: 620px;
+    overflow: auto;
     padding: 16px 8px;
     border-top: 1px solid lighten($primary-color, 50%);
   }
