@@ -29,7 +29,7 @@ angular.module('thinkSlowApp')
                 }
               });
 
-              var yaMapUrl = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0w6kgw7s0yyARYujkwnvhpo3yCEaTFNZ&width=600&height=380&id=map-placeholder-' + ctrl.id;
+              var yaMapUrl = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=HV03escVDNTT1fzr3KmARPDVMFgDEMHN&width=600&height=380&id=map-placeholder-' + ctrl.id;
               $.getScript(yaMapUrl, angular.noop);
             }
           ]
