@@ -3,21 +3,17 @@ var angular = require('angular');
 angular.module('thinkSlowApp')
 
     .controller('ThinkSlowMainCtrl', [
-        function() {
+        'speakers',
+        'meetings',
+        function(speakers, meetings) {
           var thinkSlowMainCtrl = this;
 
-          var mockMeetings = [
-            {
-              "title": "Реальность виртуальной коммуникации",
-              "speakers": [0, 1, 2, 3],
-              "timepadLink": "https://thinksharp.timepad.ru/event/233302/",
-              "description": "<p>На очередной встрече Щепотки Соли выступит Анастасия Сергеева, эксперт в области в области computer-mediated communication и профессиональных виртуальных сетей, кандидат психологических наук, сотрудник Университета ИТМО. Анастасия расскажет о том, как мы воспринимаем общение в виртуальных социальных сетях, и как это общение меняет нас.</p><p>Несмотря на то, что еще с начала 2010-х годов ряд исследователей и публицистов предсказывали скорую смерть виртуальных социальных сетей (Facebook, Twitter, Вконтакте), они по-прежнему процветают; более того, общение в них постепенно охватывает все больший круг тем: от личного, дружеского общения, до профессиональной и бизнес-коммуникации. Процент времени, который средний пользователь проводит в виртуальных сетях, также увеличился в разы и с учетом мобильных приложений иногда составляет до 90% рабочего времени. Иными словами — людям по-прежнему нравятся социальные сети и общение в них.</p><p>Вопрос в том, а почему они собственно нравятся? В чем психологические причины привлекательности виртуальных социальных сетей?</p><p>В лекции мы рассмотрим, что получает человек, находясь в виртуальной социальной сети, какие внешние и внутренние факторы влияют на то, как он будет себя вести, как работает сетевое доверие и недоверие и как, судя по нынешним тенденциям, будет выглядеть виртуальная социальная сеть через 15-20 лет.</p>",
-              "timepadCustomizedId": "11350",
-              "timepadEventId": "236802"
-            }
-          ];
-
-          thinkSlowMainCtrl.pastMettings = mockMeetings;
-          thinkSlowMainCtrl.mettingsAnnouncements = mockMeetings;
+          thinkSlowMainCtrl.mettingsAnnouncements = meetings;
+          thinkSlowMainCtrl.mettingsAnnouncements.forEach(function(meeting) {
+            var speakerIds = meeting.speakers;
+            meeting.speakers = speakers.filter(function(speaker) {
+              return speakerIds.indexOf(speaker.id) > -1
+            });
+          });
         }
     ]);

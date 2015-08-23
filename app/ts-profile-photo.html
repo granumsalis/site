@@ -17,8 +17,11 @@
                         <a ng-if="profileCtrl.profile.link" ng-href="{{profileCtrl.profile.link}}">{{profileCtrl.profile.name}}</a>
                         <span ng-if="!profileCtrl.profile.link">{{profileCtrl.profile.name}}</span>
                     </h5>
-                    <div ng-bind-html="profileCtrl.trustedProfileDescription"></div>
+                    <p>{{profileCtrl.profile.shortDescription}}</p>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col s12" ng-bind-html="profileCtrl.trustedProfileDescription"></div>
             </div>
         </div>
     </div>

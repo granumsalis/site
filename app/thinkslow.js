@@ -1,5 +1,3 @@
-require('./thinkslow.scss');
-
 var angular = require('angular');
 
 var thinkSlowAppModule = angular.module('thinkSlowApp', []);
@@ -13,11 +11,24 @@ thinkSlowAppModule.config([
     }
 ]);
 
+/**
+ * Styles
+ */
+require('./thinkslow.scss');
+
+/**
+ * Javascript
+ */
 require('./effects-initialization');
 require('./ts-meeting-announcement');
 require('./ts-past-meeting-card');
 require('./ts-profile-photo');
 require('./think-slow-main-ctrl');
+require('./displayed-data');
+
+/**
+ * Templates
+ */
 require('./suggest-topic-action.html');
 
 module.exports = thinkSlowAppModule;
