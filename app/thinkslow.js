@@ -16,6 +16,7 @@ thinkSlowAppModule.config([
 require('./effects-initialization');
 require('./ts-meeting-announcement');
 require('./ts-past-meeting-card');
+require('./ts-profile-photo');
 require('./think-slow-main-ctrl');
 require('./suggest-topic-action.html');
 
