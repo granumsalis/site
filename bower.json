@@ -7,7 +7,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "angular-materialize": "0.1",
-    "stamplay-sdk": "~1.2.6"
+    "stamplay-sdk": "~1.2.6",
+    "materialize": "~0.97.0"
   }
 }
