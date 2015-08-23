@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "angular-i18n": "^1.4.4",
     "css-loader": "^0.16.0",
     "file-loader": "^0.8.4",
     "ng-cache-loader": "0.0.9",
@@ -22,6 +21,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
-    "angular": "^1.4.4"
+    "angular": "^1.4.4",
+    "angular-i18n": "^1.4.4"
   }
 }
