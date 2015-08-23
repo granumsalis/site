@@ -1,4 +1,5 @@
 var angular = require('angular');
+require('../node_modules/angular-i18n/angular-locale_ru-ru');
 
 var thinkSlowAppModule = angular.module('thinkSlowApp', []);
 

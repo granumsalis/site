@@ -1,6 +1,9 @@
 <div class="row thinkslow-announcement">
     <div class="col s12">
-        <div class="thinkslow-announcement__title">{{ctrl.meeting.title}}</div>
+        <div class="thinkslow-announcement__title">
+            {{ctrl.meeting.title}}&nbsp;&nbsp;&nbsp;
+            <span class="thinkslow-announcement__time">{{ctrl.meeting.time | date:'d MMMM yyyy, HH:mm'}}</span>
+        </div>
     </div>
 
     <div class="col s12 m6">

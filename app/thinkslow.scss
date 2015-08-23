@@ -104,6 +104,10 @@ h6 {
     margin-bottom: 5px;
     color: $primary-color;
   }
+  &__time {
+    color: lighten($primary-color, 20%);
+    font-weight: 400;
+  }
   &__body {
     height: 620px;
     max-height: 620px;
