@@ -120,3 +120,14 @@ h6 {
 .thinkslow-link_pseudo {
   cursor: pointer;
 }
+
+.thinkslow-profile-photo {
+  cursor: pointer;
+  display: block;
+  margin: 16px auto;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}

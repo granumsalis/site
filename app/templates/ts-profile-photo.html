@@ -1,11 +1,9 @@
-<div>
+<div class="thinkslow-profile-photo__wrapper">
     <img width="100" height="100"
          ng-src="{{profileCtrl.profile.photo}}"
-         alt="Лектор"
-         class="responsive-img modal-trigger"
-         ng-class="{'circle': profileCtrl.isCircle}"
-         ng-href="#speaker-card-{{profileCtrl.id}}"
-         style="cursor: pointer">
+         alt="{{profileCtrl.profile.name}}"
+         class="responsive-img modal-trigger thinkslow-profile-photo"
+         ng-href="#speaker-card-{{profileCtrl.id}}">
     <div id="speaker-card-{{profileCtrl.id}}" class="modal">
         <div class="modal-content">
             <div class="row">

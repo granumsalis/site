@@ -6,6 +6,7 @@ angular.module('thinkSlowApp')
         function() {
           return {
             template: require('./../templates/ts-profile-photo.html'),
+            replace: true,
             scope: {
               profile: '='
             },
