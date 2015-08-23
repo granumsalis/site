@@ -15,21 +15,21 @@ thinkSlowAppModule.config([
 /**
  * Styles
  */
-require('./thinkslow.scss');
+require('./styles/thinkslow.scss');
 
 /**
  * Javascript
  */
-require('./effects-initialization');
-require('./ts-meeting-announcement');
-require('./ts-past-meeting-card');
-require('./ts-profile-photo');
-require('./think-slow-main-ctrl');
-require('./displayed-data');
+require('./js/effects-initialization');
+require('./js/ts-meeting-announcement');
+require('./js/ts-past-meeting-card');
+require('./js/ts-profile-photo');
+require('./js/think-slow-main-ctrl');
+require('./js/displayed-data');
 
 /**
  * Templates
  */
-require('./suggest-topic-action.html');
+require('./templates/suggest-topic-action.html');
 
 module.exports = thinkSlowAppModule;

@@ -6,7 +6,7 @@ angular.module('thinkSlowApp')
         function () {
           return {
             restrict: 'E',
-            template: require('./ts-past-meeting-card.html'),
+            template: require('./../templates/ts-past-meeting-card.html'),
             scope: {
               meeting: '=',
               isEven: '&'

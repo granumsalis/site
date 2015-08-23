@@ -5,7 +5,7 @@ angular.module('thinkSlowApp')
     .directive('tsProfilePhoto', [
         function() {
           return {
-            template: require('./ts-profile-photo.html'),
+            template: require('./../templates/ts-profile-photo.html'),
             scope: {
               profile: '='
             },
