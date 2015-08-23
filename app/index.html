@@ -106,12 +106,16 @@
     <div class="container">
         <div class="row">
             <div class="col s6 center-align">
-                <i class="material-icons thinkslow-feedback-icons">email</i><br/>
-                <span class="grey-text text-lighten-4">Связаться с нами</span>
+                <div ng-click="thinkSlowMainCtrl.sendFeedbackMail()">
+                    <i class="material-icons thinkslow-feedback-icons">email</i><br/>
+                    <span class="grey-text text-lighten-4 thinkslow-link_pseudo">Связаться с нами</span>
+                </div>
             </div>
             <div class="col s6 center-align">
-                <i class="material-icons thinkslow-feedback-icons">assignment</i><br/>
-                <span class="grey-text text-lighten-4">Форма обратной связи</span>
+                <div ng-click="thinkSlowMainCtrl.fillInFeedbackForm()">
+                    <i class="material-icons thinkslow-feedback-icons">assignment</i><br/>
+                    <span class="grey-text text-lighten-4 thinkslow-link_pseudo">Форма обратной связи</span>
+                </div>
             </div>
         </div>
         <div class="footer-copyright">

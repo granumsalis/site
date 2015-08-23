@@ -6,7 +6,8 @@ angular.module('thinkSlowApp')
       'speakers',
       'meetings',
       'places',
-      function(speakers, meetings, places) {
+      '$window',
+      function(speakers, meetings, places, $window) {
         var thinkSlowMainCtrl = this;
 
         thinkSlowMainCtrl.mettingsAnnouncements = meetings;
@@ -22,5 +23,13 @@ angular.module('thinkSlowApp')
             }
           }
         });
+
+        thinkSlowMainCtrl.sendFeedbackMail = function() {
+          $window.open('mailto:' + 'info@granumsalis.ru');
+        };
+
+        thinkSlowMainCtrl.fillInFeedbackForm = function() {
+          $('#feedback-form-dialog').openModal();
+        };
       }
     ]);
