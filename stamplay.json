@@ -1,6 +1,6 @@
 {
   "appId": "thinkslow",
-  "apiKey": "7c756fe1e05a6a9742fdba24a116ad5c14f7cbb2da974889fcb962f74c2a0226",
+  "apiKey": "",
   "public": "./dist",
   "ignore": [
     "stamplay.json",
