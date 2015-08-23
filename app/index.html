@@ -17,7 +17,7 @@
     <script src="thinkslow.min.js"></script>
 
 </head>
-<body ng-app="thinkSlowApp">
+<body ng-app="thinkSlowApp"  ng-controller="ThinkSlowMainCtrl as thinkSlowMainCtrl">
 <nav>
     <div class="nav-wrapper blue-grey lighten-5">
         <a href="http://vk.com/thinkslow" target="_blank" class="brand-logo right">
@@ -25,7 +25,11 @@
         </a>
         <ul class="blue-grey darken-3 left hide-on-med-and-down">
             <li><a href="#next-events" class="ts-scrollspy-link">Анонсы</a></li>
-            <li><a href="#past-events" class="ts-scrollspy-link">Прошедшие события</a></li>
+            <li ng-if="thinkSlowMainCtrl.pastMeetings.length">
+                <a href="#past-events" class="ts-scrollspy-link" ng-if="">
+                    Прошедшие события
+                </a>
+            </li>
             <li><a href="#contacts" class="ts-scrollspy-link">О нас</a></li>
         </ul>
     </div>
@@ -68,7 +72,7 @@
 
 </div>
 
-<div class="container" ng-controller="ThinkSlowMainCtrl as thinkSlowMainCtrl">
+<div class="container">
 
     <h4 id="next-events" class="thinkslow-header">Ближайшие события</h4>
 
@@ -78,9 +82,12 @@
         </div>
     </div>
 
-    <h4 id="past-events" class="thinkslow-header">Материалы прошедших событий</h4>
+    <h4 id="past-events" ng-if="thinkSlowMainCtrl.pastMettings.length" class="thinkslow-header">
+        Материалы прошедших событий
+    </h4>
 
-    <div ng-repeat="meeting in thinkSlowMainCtrl.pastMettings">
+    <div ng-if="thinkSlowMainCtrl.pastMettings.length"
+         ng-repeat="meeting in thinkSlowMainCtrl.pastMettings">
         <ts-past-meeting-card meeting="meeting" is-even="$even"></ts-past-meeting-card>
     </div>
 
@@ -89,17 +96,6 @@
 
     <h4 class="thinkslow-header">Партнёры</h4>
     <div class="row">Здесь логотипы</div>
-
-    <div class="row">
-        <!--<div class="col s6 center-align">
-            <i class="material-icons thinkslow-feedback-icons">email</i><br/>
-            <span>Связаться с нами</span>
-        </div>
-        <div class="col s6 center-align">
-            <i class="material-icons thinkslow-feedback-icons">assignment</i><br/>
-            <span>Форма обратной связи</span>
-        </div>-->
-    </div>
 </div>
 <p>&nbsp;</p>
 
