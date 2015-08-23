@@ -22,15 +22,19 @@ angular.module('thinkSlowApp')
               ctrl.id = Math.floor(Math.random() * 1000000);
 
               $scope.$watch('ctrl.meeting', function(meeting) {
-                if (meeting && meeting.description) {
-                  ctrl.trustedDescription = $sce.trustAsHtml(meeting.description);
-                } else {
-                  ctrl.trustedDescription = null;
+                if (!meeting) {
+                  return;
+                }
+                if (meeting.description) {
+                  ctrl.trustedDescription = meeting.description ? $sce.trustAsHtml(meeting.description) : '';
+                }
+                if (meeting.place) {
+                  var yaMapUrl = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?sid='
+                      + meeting.place.yaMapId + '&width=600&height=380&id=map-placeholder-' + ctrl.id;
+                  $.getScript(yaMapUrl, angular.noop);
                 }
               });
 
-              var yaMapUrl = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=HV03escVDNTT1fzr3KmARPDVMFgDEMHN&width=600&height=380&id=map-placeholder-' + ctrl.id;
-              $.getScript(yaMapUrl, angular.noop);
 
             }
           ]

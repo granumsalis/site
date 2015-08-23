@@ -33,6 +33,8 @@
     </div>
     <div id="{{ 'announcement-' + ctrl.id + '-place' }}" class="col s12">
         <div class="thinkslow-announcement__body">
+            <h6>{{ctrl.meeting.place.title}}</h6>
+            <p>{{ctrl.meeting.place.address}}</p>
             <div class="valign-wrapper" style="width: 100%">
                 <div class="valign center-align" id="{{ 'map-placeholder-' + ctrl.id }}"></div>
             </div>
