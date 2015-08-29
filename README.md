@@ -21,4 +21,11 @@ npm start
 ```
 - Open browser. Type address http://localhost:8080
 
+## Building site
+```
+npm run build
+```
+Then copy content of directory '''dist''' to server
+
+
 
