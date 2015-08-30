@@ -6,8 +6,9 @@ angular.module('thinkSlowApp')
       'speakers',
       'meetings',
       'places',
+      'organizers',
       '$window',
-      function(speakers, meetings, places, $window) {
+      function(speakers, meetings, places, organizers, $window) {
         var thinkSlowMainCtrl = this;
 
         thinkSlowMainCtrl.mettingsAnnouncements = meetings;
@@ -23,6 +24,7 @@ angular.module('thinkSlowApp')
             }
           }
         });
+        thinkSlowMainCtrl.organizers = organizers;
 
         thinkSlowMainCtrl.sendFeedbackMail = function() {
           $window.open('mailto:' + 'info@granumsalis.ru');

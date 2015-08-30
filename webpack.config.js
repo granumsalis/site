@@ -20,6 +20,7 @@ module.exports = {
         loader: 'ng-cache'
       },
       { test: /\.png$/, loader: 'url-loader?limit=10000' },
+      { test: /\.jpg$/, loader: 'url-loader?limit=10000' },
       { test: /\.gif$/, loader: 'url-loader?limit=10000' },
       // the url-loader uses DataUrls.
       // the file-loader emits files.

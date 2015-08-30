@@ -63,5 +63,38 @@ angular.module('thinkSlowApp')
         address: 'Университетская набережная 7-9-11, корпус 5А',
         yaMapId: 'HV03escVDNTT1fzr3KmARPDVMFgDEMHN'
       }
+    ])
+
+    .constant('organizers', [
+      {
+        id: 0,
+        name: 'Антон Афанасьев',
+        photo: require('./../assets/anton-afanasyev.jpg'),
+        link: 'https://vk.com/anton.afanasyev'
+      },
+      {
+        id: 1,
+        name: 'Антон Зельдин',
+        photo: require('./../assets/anton-zeldin.jpg'),
+        link: 'https://vk.com/neferzem'
+      },
+      {
+        id: 2,
+        name: 'Дарья Романова',
+        photo: require('./../assets/daria-romanova.jpg'),
+        link: 'https://vk.com/d.b.romanova'
+      },
+      {
+        id: 3,
+        name: 'Дмитрий Калупин',
+        photo: require('./../assets/dmitri-kalupin.jpg'),
+        link: 'https://vk.com/awarehouse'
+      },
+      {
+        id: 4,
+        name: 'Дмитрий Заика',
+        photo: require('./../assets/dmitri-zaika.jpg'),
+        link: 'https://vk.com/dmitry_zaika'
+      }
     ]);
 

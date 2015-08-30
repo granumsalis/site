@@ -88,11 +88,20 @@
         <ts-past-meeting-card meeting="meeting" is-even="$even"></ts-past-meeting-card>
     </div>
 
-    <h4 id="contacts" class="thinkslow-header">Организаторы</h4>
-    <div class="row">Здесь фото организаторов</div>
+    <h4 id="contacts" class="thinkslow-header" ng-if="thinkSlowMainCtrl.organizers">Организаторы</h4>
+    <div class="row">
+        <div class="col m1 s3">&nbsp;</div>
+        <div class="col m2 s6" ng-repeat="organaizer in thinkSlowMainCtrl.organizers">
+            <ts-profile-photo profile="organaizer"></ts-profile-photo>
+            <div class="thinkslow-centered-col-text">
+                {{organaizer.name}}
+            </div>
+        </div>
+        <div class="col m1 s3">&nbsp;</div>
+    </div>
 
-    <h4 class="thinkslow-header">Партнёры</h4>
-    <div class="row">Здесь логотипы</div>
+    <h4 class="thinkslow-header" ng-if="thinkSlowMainCtrl.partners">Партнёры</h4>
+    <div class="row" ng-if="thinkSlowMainCtrl.partners">Здесь логотипы</div>
 </div>
 <p>&nbsp;</p>
 
@@ -131,7 +140,7 @@
 
 <div id="feedback-form-dialog" class="modal">
     <div class="modal-content">
-            <iframe src="https://docs.google.com/forms/d/1YAH8qUZR8p-wL7ZpyAEYHijFNHZ-JXXRuTkt1E40GyI/viewform?embedded=true" width="760" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <iframe src="https://docs.google.com/forms/d/1YAH8qUZR8p-wL7ZpyAEYHijFNHZ-JXXRuTkt1E40GyI/viewform?embedded=true" width="760" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
 </div>
 

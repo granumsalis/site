@@ -32,7 +32,7 @@ $link-color: color("light-blue", "darken-1") !default;
 }
 
 .thinkslow-header {
-  margin: 90px 0 0 0;
+  margin: 90px 0 40px 0;
   text-align: center;
   font-weight: 400;
   font-size: 3.28rem;
@@ -93,7 +93,7 @@ h6 {
 .thinkslow-announcement {
   margin-top: 40px;
   &:first-child {
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   &__title {
@@ -130,4 +130,9 @@ h6 {
     width: 100%;
     height: 100%;
   }
+}
+
+.thinkslow-centered-col-text {
+  text-align: center;
+  width: 100%;
 }

@@ -12,7 +12,9 @@
                 </div>
                 <div class="col s8">
                     <h5>
-                        <a ng-if="profileCtrl.profile.link" ng-href="{{profileCtrl.profile.link}}">{{profileCtrl.profile.name}}</a>
+                        <a ng-if="profileCtrl.profile.link" target="_blank" ng-href="{{profileCtrl.profile.link}}">
+                            {{profileCtrl.profile.name}}
+                        </a>
                         <span ng-if="!profileCtrl.profile.link">{{profileCtrl.profile.name}}</span>
                     </h5>
                     <p>{{profileCtrl.profile.shortDescription}}</p>
