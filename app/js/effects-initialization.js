@@ -14,6 +14,7 @@ $(function () {
       var target = $(this.hash);
       target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
       if (target.length) {
+        $('.button-collapse').sideNav('hide');
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
@@ -23,4 +24,8 @@ $(function () {
   });
 
   $('ul.tabs').tabs();
+
+  $(".button-collapse").sideNav({
+    closeOnClick: true
+  });
 });
