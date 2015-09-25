@@ -2,7 +2,8 @@
     <img width="100" height="100"
          ng-src="{{profileCtrl.profile.photo}}"
          alt="{{profileCtrl.profile.name}}"
-         class="responsive-img modal-trigger thinkslow-profile-photo"
+         class="responsive-img thinkslow-profile-photo"
+         ng-click="profileCtrl.openModal()"
          ng-href="#speaker-card-{{profileCtrl.id}}">
     <div id="speaker-card-{{profileCtrl.id}}" class="modal">
         <div class="modal-content">

@@ -1,5 +1,4 @@
 $(function () {
-  $('.modal-trigger').leanModal();
 
   $('.slider').slider({full_width: true});
 
@@ -22,9 +21,7 @@ $(function () {
       }
     }
   });
-
-  $('ul.tabs').tabs();
-
+  
   $(".button-collapse").sideNav({
     closeOnClick: true
   });

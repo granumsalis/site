@@ -1,9 +1,14 @@
 var angular = require('angular');
 require('../node_modules/angular-i18n/angular-locale_ru-ru');
+require('../node_modules/angular-resource/angular-resource');
 
-var thinkSlowAppModule = angular.module('thinkSlowApp', []);
+var thinkSlowAppModule = angular.module('thinkSlowApp', [
+    'ngResource'
+]);
 
 thinkSlowAppModule.constant('Stamplay', window.Stamplay);
+
+thinkSlowAppModule.constant('BackendUrl', BACKEND);
 
 thinkSlowAppModule.config([
     'Stamplay',

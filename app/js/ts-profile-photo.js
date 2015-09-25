@@ -21,6 +21,10 @@ angular.module('thinkSlowApp')
 
                   profileCtrl.id = Math.floor(Math.random() * 1000000);
 
+                  profileCtrl.openModal = function() {
+                    $('#speaker-card-' + profileCtrl.id).openModal();
+                  };
+
                   $scope.$watch('profileCtrl.profile.description', function(description) {
                     profileCtrl.trustedProfileDescription = description ? $sce.trustAsHtml(description) : '';
                   });

@@ -41,6 +41,10 @@ module.exports = {
       filename: 'index.html',
       template: './app/index.html',
       inject: 'head'
+    }),
+    new webpack.DefinePlugin({
+      //BACKEND: '"http://katriyna.info/rest/"'
+      BACKEND: '"http://localhost:3000/"'
     })
   ]
 };
