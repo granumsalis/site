@@ -25,7 +25,7 @@ angular.module('thinkSlowApp')
           meetings.forEach(function(meeting) {
             var speakerIds = meeting.speakers;
             meeting.speakers = speakers.filter(function(speaker) {
-              return speakerIds.indexOf(speaker.id) > -1
+              return speakerIds.indexOf(speaker._id) > -1
             });
             for (var i = 0; i < places.length; ++i) {
               if (places[i].id === meeting.place) {
