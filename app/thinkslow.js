@@ -1,9 +1,11 @@
 var angular = require('angular');
 require('../node_modules/angular-i18n/angular-locale_ru-ru');
 require('../node_modules/angular-resource/angular-resource');
+require('../node_modules/ig-truncate/dist/igTruncate');
 
 var thinkSlowAppModule = angular.module('thinkSlowApp', [
-    'ngResource'
+    'ngResource',
+    'igTruncate'
 ]);
 
 thinkSlowAppModule.constant('Stamplay', window.Stamplay);
@@ -36,5 +38,6 @@ require('./js/displayed-data');
  * Templates
  */
 require('./templates/suggest-topic-action.html');
+require('./templates/speakers-list.html');
 
 module.exports = thinkSlowAppModule;

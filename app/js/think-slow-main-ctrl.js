@@ -9,15 +9,18 @@ angular.module('thinkSlowApp')
       'BackendUrl',
       '$resource',
       '$q',
-      function(places, organizers, $window, BackendUrl, $resource, $q) {
+      'speakers',
+      '$interval',
+      function(places, organizers, $window, BackendUrl, $resource, $q, speakers, $interval) {
 
         var thinkSlowMainCtrl = this;
 
         thinkSlowMainCtrl.mettingsAnnouncements = $resource(BackendUrl + 'meetings').query();
+        thinkSlowMainCtrl.speakers = $resource(BackendUrl + 'speakers').query();
 
         $q.all({
           meetings: thinkSlowMainCtrl.mettingsAnnouncements.$promise,
-          speakers: $resource(BackendUrl + 'speakers').query().$promise
+          speakers: thinkSlowMainCtrl.speakers.$promise
         }).then(function(result) {
           console.log('result', result);
           var meetings = result.meetings;

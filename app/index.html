@@ -24,18 +24,24 @@
             <i class="material-icons blue-grey-text text-darken-3">menu</i>
         </a>
         <ul class="blue-grey darken-3 left hide-on-med-and-down">
+            <li>
+                <a href="#speakers-header" class="ts-scrollspy-link">Лекторы</a>
+            </li>
             <li><a href="#next-events" class="ts-scrollspy-link">Анонсы</a></li>
             <li ng-if="thinkSlowMainCtrl.pastMeetings.length">
-                <a href="#past-events" class="ts-scrollspy-link" ng-if="">
+                <a href="#past-events" class="ts-scrollspy-link">
                     Прошедшие события
                 </a>
             </li>
             <li><a href="#contacts" class="ts-scrollspy-link">О нас</a></li>
         </ul>
         <ul id="slide-out" class="side-nav">
+            <li>
+                <a href="#speakers-header" class="ts-scrollspy-link">Лекторы</a>
+            </li>
             <li><a href="#next-events" class="ts-scrollspy-link">Анонсы</a></li>
             <li ng-if="thinkSlowMainCtrl.pastMeetings.length">
-                <a href="#past-events" class="ts-scrollspy-link" ng-if="">
+                <a href="#past-events" class="ts-scrollspy-link">
                     Прошедшие события
                 </a>
             </li>
@@ -82,6 +88,15 @@
 </div>
 
 <div class="container">
+
+    <h4 id="speakers-header" class="thinkslow-header">
+        Лекторы
+    </h4>
+
+    <div class="row"
+         ng-if="thinkSlowMainCtrl.speakers.length"
+         ng-include="'speakers-list.html'">
+    </div>
 
     <h4 id="next-events" class="thinkslow-header">Ближайшие события</h4>
 
